@@ -1,0 +1,42 @@
+
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+/* This is the key! */
+.chat-container {
+  /* You MUST provide a defined height. */
+  height: 600px;
+  width: 400px;
+  
+  /* You MUST provide an overflow property. */
+  overflow-y: auto; 
+  
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* We'll use this for our chat messages later */
+.chat-bubble {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  /* This helps visualize the dynamic height */
+  display: flex;
+  gap: 8px;
+}
+
+.chat-bubble strong {
+  color: #333;
+  min-width: 70px;
+}
+
+.chat-bubble p {
+  margin: 0;
+  color: #555;
+  /* Allow long messages to wrap */
+  word-break: break-word; 
+}
